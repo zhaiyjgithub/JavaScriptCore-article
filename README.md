@@ -2,12 +2,13 @@
 >记得一个月前一位前端的朋友问我关于JavaScript如何调用iOS原生方法的问题。我当时我也不知道如何做，就推荐了kitten同学的博客文章[UIWebView与JS的深度交互](http://kittenyang.com/webview-javascript-bridge /).不过最近我也开始学习前端开发了，回头看了一下这个问题，也把这个问题解决并总结一下。希望可以让你得到一定帮助。
 
 先上源码:
-[Object-C:](https://github.com/zhaiyjgithub/JavaScriptCore-Object-C.git)
 
-[swift:](https://github.com/zhaiyjgithub/JavaScriptCore-swift.git)
+[Object-C](https://github.com/zhaiyjgithub/JavaScriptCore-Object-C.git)
+
+[swift](https://github.com/zhaiyjgithub/JavaScriptCore-swift.git)
 
 ### native端调用JS端
-创建工程，添加JavaScriptCore.framework这个依赖库，并添加`@import JavaScriptCore;`包，或者`#import <JavaScriptCore/JavaScriptCore.h>`也可以。
+创建工程，添加JavaScriptCore.framework这个依赖库，并添加`@import JavaScriptCore;`包，或者`#import <JavaScriptCore/JavaScriptCore.h>`也可以。
 在工程中先添加一个按钮`callJSFunctioinBtn`,并为这个按钮添加事件`clickCallJSFunctionBtn`。然后添加一个webView和一个HTML文件`index.html`,最后使用webView加载这个添加到工程中的HTML文件。
 ```
 - (void)viewDidLoad {
